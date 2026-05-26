@@ -1,0 +1,201 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: antiquewhite;
+    overflow: hidden;
+}
+
+
+@keyframes fadeOutMe {
+    0% {
+        opacity: 100%;
+    }
+    90% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 0%;
+    }
+}
+
+@keyframes fadeInMe {
+    0% {
+        opacity: 0%;
+    }
+    90% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+
+
+.opener {
+    background-color: rgb(33, 33, 33);
+    width:100%;
+    height: 100vh;
+    color:wheat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeOutMe 2s ease forwards;
+    position: fixed;
+    animation: gradientMorph 4s ease fowards;
+    z-index: 100;
+    pointer-events: none;
+
+}
+
+.opener-text {
+    color: rgb(255, 255, 255);
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+}
+
+.home-section {
+    transition: all 0.5s ease;
+    background-color: rgb(211, 211, 211);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-section h1 {
+    font-family: 'Lobster', serif;
+    margin-right: 1200px;
+    margin-bottom: 400px;
+    font-size: 400%;
+    color: white;
+    -webkit-text-stroke: 1px rgb(51, 51, 51);
+}
+
+.darkmode-img {
+    max-height: 25px;
+    max-width: 25px;
+    pointer-events: none;
+    margin-left: 13px;
+    margin-top: 12px;
+    pointer-events: none;
+}
+
+
+.true-dark {
+    display: none;
+}
+.true-dark-button {
+    transition: all 0.5s ease;
+    position: fixed;
+    margin-top: 9   0px;
+    top: 560px;
+    right: 20px;
+    width: 50px;
+    height:50px;
+    border-radius: 60%;
+    border: 2px solid black;
+    background-color: white;
+}
+
+.true-dark:checked ~ .true-dark-button {
+    transition: all 0.5s ease;
+    background-color: rgb(41, 41, 41);
+    
+}
+
+.true-dark:checked ~ header .nav-bar {
+    transition: all 0.5s ease;
+    background-color: rgb(39, 39, 39);
+    color: white;
+}
+
+.true-dark:checked ~ .home-section .start-button {
+    transition: all 0.5s ease;
+    background-color: rgb(83, 83, 81);
+    color:wheat;
+
+}
+.true-dark:checked ~ .home-section {
+    transition: all 0.5s ease;
+    background-color: rgb(49, 49, 49);
+}
+.true-dark:checked ~ .home-section h1 {
+    transition: all 0.5s ease;
+    -webkit-text-stroke: 0.5px rgb(0, 0, 0);
+}
+
+
+.true-dark-button:hover {
+    cursor: pointer;
+    transform: scale(1.15);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+.true-dark-button:active {
+    transform: scale(1.05);
+    background-color: rgb(41, 41, 41);
+}
+.start-button {
+    transition: all 0.5s ease;
+    border: 2px solid black;
+    background-color: #f1e690;
+    border-radius: 10%;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+}
+
+.start-button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    background-color: #f1e690;
+    color: black;
+}
+.nav-bar {
+    transition: all 0.5s ease;
+    display: flex;
+    background-color: rgba(231, 198, 105, 0.471);
+    color:rgb(61, 61, 61);
+    justify-content: center;
+    border-bottom: 2px solid black;
+}
+
+.nav-bar ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap:200px;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    position: relative;
+    padding:10px 0;
+    transition: color 0.3s ease;
+}
+
+.nav-bar a::after {
+    content:'';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom:0;
+    left:50%;
+    background-color: rgb(239, 230, 140);
+    transition: width 0.3s ease, left 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.navbar a:hover::after {
+    width: 100%;
+    left: 0;
+}
