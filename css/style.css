@@ -463,6 +463,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color:var(--text-main);
+    background-color: #000000;
 }
 
 .skill-types {
@@ -477,8 +479,36 @@ body {
     justify-content: center;
     align-items: center;
     gap:50px;
+
 }
 
+.card-with-description {
+    display: flex;
+    flex-direction: row;
+    border:2px solid white;
+}
+
+.card-with-description-right {
+    display: flex;
+    flex-direction: row;
+    border:2px solid white;
+}
+
+.card-descrip {
+    display:flex;
+    flex-direction: column;
+    padding:;
+    border: 2px solid white;
+    margin: 20px;
+}
+
+.card-descrip-right {
+    display:flex;
+    flex-direction: column;
+    padding:50px;
+    border: 2px solid white;
+    margin: 20px;
+}
 .ss-card {
     margin:20px;
     padding:2vw;
@@ -490,20 +520,34 @@ body {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    background-color: rgb(20, 20, 20);
+    border-radius:5%;
 
 }
 
-.hs-skills {
-    padding:2vw;
+.ss-card img {
+    width: 50px;
+    height:50px;
+}
+
+.hs-card img {
+    width: 50px;
+    height:50px;
+}
+
+.hs-card {
     margin:20px;
+    padding:2vw;
     padding-left: 5vw;
     padding-right: 5vw;
-    display:flex;
     border: 2px solid black;
+    display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    overflow:hidden;
+    overflow: hidden;
+    background-color: rgb(20, 20, 20);
+    border-radius:5%;
 
 }
 
