@@ -18,7 +18,6 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%;
-    background-color: rgb(154, 154, 154);
 
 }
 
@@ -75,6 +74,10 @@ body {
 @keyframes contentShrink {
     0%   { transform: scale(1); }
     100% { transform: scale(0.3); }
+}
+
+@keyframes fade-in {
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .opener {
@@ -381,26 +384,55 @@ body {
 .contacts nav ul li img {
     height:20px;
 }
-
+/*---------------------------------------------------PROJECT SECTION---------------------------------------------------------*/
 .projects {
+    color:var(--text-main);
     display:flex;
+    font-family: 'Playfair Display', serif;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: transparent;
+}
+
+.project-body {
+    position: relative;
+    background-image: url(../images/bg.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.projects h1 {
+    font-size:300%;
+    padding:0;
+    border-bottom: 5px solid var(--text-main);
+    -webkit-text-stroke: 2px #000000;
 }
 
 .project-container {
-    padding:20px;
-    overflow: hidden;
+    overflow: visible;
+    padding:50px;
 }
 
 .project-card {
-    border:2px solid black;
+    background-color: rgb(18, 18, 18);
+    color: var(--text-main);
+    border:2px solid var(--gold-dark);
     margin:10px;
+    margin-bottom: 60px;
     display:flex;
     flex-direction: row;
     border-radius: 2%;
-    overflow: hidden;
+    will-change: transform;
+    animation-fill-mode: none !important;
+    position: relative;
+    z-index: 1;
+}
+
+.project-card:hover {
+    
+    transform: scale(1.05);
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.3s ease;
 }
 
 .project-card img {
@@ -420,11 +452,12 @@ body {
 
 .project-description .open-project {
     text-decoration: none;
-    background-color: red;
+    background-color: var(--text-secondary);
+    color:black;
     border-radius: 20%;
     padding:7px;
 }
-
+/*                                SKILLS PAGE SECTION                                             */
 .skills-page {
     display:flex;
     flex-direction: column;
@@ -474,7 +507,7 @@ body {
 
 }
 
-
+/*---------------------------------------------------GALLERY SECTION---------------------------------------------------------*/
 .gallery {
     display:flex;
     flex-direction: column;
@@ -531,3 +564,6 @@ input[type="radio"] {
 #s1:checked ~ .descriptions .desc-1 { display: block; }
 #s2:checked ~ .descriptions .desc-2 { display: block; }
 #s3:checked ~ .descriptions .desc-3 { display: block; }
+
+
+
