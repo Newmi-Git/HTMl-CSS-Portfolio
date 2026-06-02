@@ -1,14 +1,115 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <script src="" async defer></script>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+
+    <link rel="stylesheet" href="css\style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+<body class="about-body">
+    <a href="index.html" class="home-btn" aria-label="Go to Home">
+        <span class="homearrow"></span>
+        <span class="home-text">Home</span>
+    </a>
+
+    <a href="" download="YaghyaAbdul_CV.pdf" class="cv-btn" aria-label="Download CV">
+    <span class="cv-icon">⬇</span>
+    <span class="cv-text">Download CV</span>
+    </a>
+
+    <div class="container">
+        <header class="about-header">
+            <h1>About Me</h1>
+            <p>Creative Developer & Creative Dancer</p>
+        </header>
+        <section class="about-grid">
+            <div class="profile-wrapper">
+                <img src="images/mepic.jpg" alt="Profile Picture" class="profile-img">
+            </div>
+            
+            <div class="about-text">
+                <h2>Yaghya Abdul</h2>
+                <p>
+                    I'm a passionate developer with a love for combining clean code with striking visual design. 
+                    My Journey began when i wanted to figure what makes a computer work. My curiosity for technology grew ever since.
+                </p>
+                <p>
+                    I specialize in back-end technologies, creating the back-bone and functionality of everyday apps and websites you use. 
+                    When I'm not coding, you can find me exploring dancing, photography, or even just playing some fun games.
+                </p>
+            </div>
+        </section>
+
+        <section class="goals-section">
+            <h2>My Goals</h2>
+            <div class="goals-grid">
+                <div class="goal-card">
+                    <span class="goal-icon">🚀</span>
+                    <h3>Master Advanced Python, JS, C#, Java.</h3>
+                    <p>Deep dive into backend programming and finding out newer topics</p>
+                </div>
+                
+                <div class="goal-card">
+                    <span class="goal-icon">💻</span>
+                    <h3>Obtain a high position in a tech company</h3>
+                    <p>Work hard enough to be able to rightfully earn a high ranking position</p>
+                </div>
+
+
+                <div class="goal-card">
+                    <span class="goal-icon">🌍</span>
+                    <h3>Create a well developed program</h3>
+                    <p>Develop a program that could be used daily to improve or make life more efficient</p>
+                </div>
+            </div>
+        </section>
+        <section class="contact-section">
+            <h2>Get In Touch</h2>
+            <p class="contact-subtitle">Have a question or want to work together? Send me a message!</p>
+            
+            <form action="#" method="POST" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" placeholder="Project Inquiry" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <h3>Let's Connect</h3>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/yaghya-abdul-b85aa1346/" target="_blank">LinkedIn</a>
+                <a href="https://github.com/Newmi-Git" target="_blank">GitHub</a>
+                <a href="#">Email</a>
+            </div>
+            <p class="copyright">&copy; 2026 Yaghya Abdul. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
 </html>
