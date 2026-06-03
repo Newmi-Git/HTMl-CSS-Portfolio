@@ -145,7 +145,7 @@ html, body {
     align-items: center;
     overflow: hidden;
     transform-origin: top left;
-    animation: openerShrink 0.9s cubic-bezier(0.77, 0, 0.18, 1) 5s forwards;
+    animation: openerShrink 0.9s cubic-bezier(0.77, 0, 0.18, 1) 3s forwards;
     transition: opacity 0.8s ease;
     pointer-events: none;
 }
@@ -155,7 +155,7 @@ html, body {
     inset: 0;
     background-color: var(--bg-dark);
     border-radius: 0px;
-    animation: bgRadius 0.9s ease 3s forwards;
+    animation: bgRadius 0.9s ease 2s forwards;
 }
 
 
@@ -166,7 +166,7 @@ html, body {
     align-items: center;
     gap: 16px;
     z-index: 2;
-    animation: contentShrink 0.9s ease 5s forwards;
+    animation: contentShrink 0.9s ease 3s forwards;
 }
 
 .opener-line {
@@ -209,7 +209,7 @@ html, body {
     min-height: 100vh;
     flex-shrink: 0;
     transition: transform 0.8s ease, filter 0.8s ease, opacity 0.8s ease;
-
+    
 }
 
 .home-section h1 {
@@ -239,16 +239,6 @@ html, body {
     display: flex;
     flex-direction: column;
 }
-
-.darkmode-img {
-    max-height: 25px;
-    max-width: 25px;
-    pointer-events: none;
-    margin-left: 13px;
-    margin-top: 12px;
-    pointer-events: none;
-}
-
 
 .true-dark {
     display: none;
@@ -455,10 +445,12 @@ html, body {
     cursor: pointer;
     border-radius: 50%;
     animation: float 3s ease-in-out infinite;
+    
 }
 .scroll-arrow:hover img {
     animation-duration: 0.5s;
     transform: scale(1.25);
+    transform: rotate(180deg);
 }
 
 #section-toggle {
@@ -561,8 +553,7 @@ label.scroll-arrow {
     transform: rotate(180deg);
 }
 
-.image-container img {
-
+.next-section img {
     max-width: none;
     height: 50vw;
     object-fit: cover;
@@ -1635,6 +1626,10 @@ footer {
 @media (max-width: 768px) {
 
     /* Home Section */
+    .home-section {
+        display: flex;
+
+    }
     .home-section h1,
     .main-heading {
         font-size: 3rem;
@@ -1655,6 +1650,10 @@ footer {
     .start-button {
         align-self: center;
         margin-top: 20px;
+    }
+
+    .opener {
+
     }
 
     /* Navigation */
