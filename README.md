@@ -65,7 +65,7 @@ This website was built to demonstrate the HTML and CSS concepts learned during t
 **Option 2 — Run locally:**
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Newmi-Git/HTMl-CSS-Project.git
+   git clone https://github.com/Newmi-Git/HTMl-CSS-Portfolio.git
    ```
 2. Open `index.html` in your browser.
 
