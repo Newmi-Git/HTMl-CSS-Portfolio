@@ -78,7 +78,6 @@ html-css-portfolio/
 ├── index.html
 ├── about.html
 ├── projects.html
-├── contact.html
 ├── gallery.html
 ├── skills.html
 ├── journey.html
