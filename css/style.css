@@ -145,7 +145,7 @@ html, body {
     align-items: center;
     overflow: hidden;
     transform-origin: top left;
-    animation: openerShrink 0.9s cubic-bezier(0.77, 0, 0.18, 1) 3s forwards;
+    animation: openerShrink 0.9s cubic-bezier(0.77, 0, 0.18, 1) 1.5s forwards;
     transition: opacity 0.8s ease;
     pointer-events: none;
 }
@@ -166,7 +166,7 @@ html, body {
     align-items: center;
     gap: 16px;
     z-index: 2;
-    animation: contentShrink 0.9s ease 3s forwards;
+    animation: contentShrink 0.9s ease 1.5s forwards;
 }
 
 .opener-line {
@@ -209,7 +209,7 @@ html, body {
     min-height: 100vh;
     flex-shrink: 0;
     transition: transform 0.8s ease, filter 0.8s ease, opacity 0.8s ease;
-    
+
 }
 
 .home-section h1 {
@@ -708,6 +708,13 @@ label.scroll-arrow {
     border-radius: 3%;
 }
 
+.project-card video {
+    max-width: 25vw;
+    margin:10px;
+    max-height: 20vw;
+    border-radius: 3%;
+}
+
 .project-description {
     margin-left:20px;
     max-width: 25vw;
@@ -773,10 +780,11 @@ label.scroll-arrow {
     background-color: #080808;
     opacity: 0;
     transition: all ease-in-out 0.3s;
-
-    
 }
 
+.soft-skills {
+    border-bottom: 2px solid var(--text-main);
+}
 .card-descrip-right {
     display:flex;
     flex-direction: column;
@@ -934,8 +942,11 @@ input[type="radio"] {
 .desc { 
     display: none;
     border:2px solid var(--text-main);
-    padding:70px;
-    padding-top: 0;
+    padding-left: 10%;
+    width: 200px;
+    min-width: 200px;
+    border-radius: 10%;
+    background-color: #080808;
 }
 
 #s1:checked ~ .descriptions .desc-1 { display: block; }
@@ -996,7 +1007,6 @@ input[type="radio"] {
     padding: 0 20px;
 }
 
-/* The Vertical Line */
 .timeline-line {
     position: absolute;
     left: 50%;
@@ -1010,7 +1020,6 @@ input[type="radio"] {
     box-shadow: 0 0 10px rgba(212, 176, 143, 0.3);
 }
 
-/* --- Timeline Item (The Wrapper) --- */
 .timeline-item {
     position: relative;
     width: 50%;
@@ -1078,7 +1087,6 @@ input[type="radio"] {
     transition: all 0.3s ease;
 }
 
-/* --- Title & Text --- */
 .timeline-content h2 {
     font-size: 1.8rem;
     color: var(--gold-light);
@@ -1092,7 +1100,7 @@ input[type="radio"] {
     line-height: 1.6;
 }
 
-/* --- The Dot (Node) --- */
+
 .timeline-dot {
     position: absolute;
     top: 30px; /* Aligns with the top of the content card roughly */
@@ -1212,7 +1220,6 @@ body {
     font-size: 0.9rem;
 }
 
-/* The Arrow Icon (Built with CSS) */
 .homearrow {
     width: 10px;
     height: 10px;
@@ -1222,7 +1229,6 @@ body {
     transition: all 0.3s ease;
 }
 
-/* Hover Effects */
 .home-btn:hover {
     background-color: var(--peach);
     color: var(--bg-dark);
@@ -1583,13 +1589,46 @@ footer {
     gap: clamp(20px, 5vw, 150px);
 }
 
+    
 @media (max-width: 768px) {
+    @keyframes openerShrink {
+    0% {
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        border-radius: 0;
+    }
+
+    100% {
+        width: 0;
+        height: 0;
+        border-radius: 12px;
+        position: fixed;
+        opacity: 0;
+    }
+    }
+
+    .home-btn {
+        padding:5px;
+    }
+
+    .title h2{
+        bottom:50vh;
+    }
+
+    .title p {
+        left:30vw;
+        bottom: 40vh;
+    }
+
+    .right-panel {
+        top:60%;
+    }
     .cv-btn {
         left: 10rem; 
         top: 1.5rem;
     }
-}
-@media (max-width: 768px) {
     .about-grid {
         grid-template-columns: 1fr;
         text-align: center;
@@ -1652,19 +1691,21 @@ footer {
         margin-top: 20px;
     }
 
-    .opener {
-
+    .opener-text .main-heading{
+        font-size: 5vw;
     }
 
     /* Navigation */
     .nav-bar ul {
         gap: 15px;
-        padding-left: 10px;
+
         flex-wrap: wrap;
+        bottom:40vh;
     }
 
     .nav-bar a {
         font-size: 0.9rem;
+                padding-left: 10vw;
     }
 
     /* Profile Section */
@@ -1685,22 +1726,60 @@ footer {
     }
 
     /* Project Cards */
+.projects h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .project-container {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
     .project-card {
-        flex-direction: column;
+        flex-direction: column !important;
         align-items: center;
+        width: 100%;
+        max-width: 400px;
+        margin: 20px auto;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    .project-card:hover {
+        transform: none;
     }
 
     .project-card img {
-        max-width: 90%;
+        width: 100%;
+        max-width: 320px;
         max-height: none;
+        height: auto;
+        margin: 0 0 15px 0;
     }
 
     .project-description {
-        width: 90%;
-        max-width: 100%;
+        width: 100%;
+        max-width: 320px;
+        height: auto;
         max-height: none;
+        margin-left: 0;
         text-align: center;
-        margin: 20px;
+    }
+
+    .project-description h2 {
+        font-size: 1.4rem;
+    }
+
+    .project-description p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    .open-project {
+        display: inline-block;
+        margin-top: 10px;
     }
 
     /* Skills */
@@ -1746,10 +1825,49 @@ footer {
         margin-top: 20px;
     }
 
-    /* Image */
     .image-container img {
         height: 80vw;
     }
+
+    .desc {
+        max-width: 30vw;
+        max-height: 100vh;
+        box-sizing: border-box;
+        padding:0;
+        width:100%;
+    }
+        .skills {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .soft-skills,
+    .hard-skills {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-with-description,
+    .card-with-description-right {
+        width: 100%;
+        align-items: center;
+    }
+
+    .ss-card,
+    .hs-card,
+    .card-descrip,
+    .card-descrip-right {
+        width: 90%;
+        max-width: 350px;
+    }
+
+    .card-descrip,
+    .card-descrip-right {
+        opacity: 1;
+    }
+    
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -1809,6 +1927,27 @@ footer {
         position: static;
         transform: none;
         text-align: center;
+    }
+        .project-container {
+        padding: 30px;
+    }
+
+    .project-card {
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .project-card img {
+        max-width: 35vw;
+        max-height: 25vw;
+    }
+
+    .project-description {
+        width: 35vw;
+        max-width: 35vw;
+        max-height: none;
+        height: auto;
     }
 }
 
