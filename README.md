@@ -60,7 +60,7 @@ This website was built to demonstrate the HTML and CSS concepts learned during t
 ## How to View the Project
 
 **Option 1 — Live site:**  
-[View on GitHub Pages](https://newmi-git.github.io/HTMl-CSS-Project/)
+[View on GitHub Pages](https://newmi-git.github.io/HTMl-CSS-Portfolio/)
 
 **Option 2 — Run locally:**
 1. Clone the repository:
